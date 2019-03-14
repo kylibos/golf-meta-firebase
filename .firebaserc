@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "golf-meta"
+    "prod": "golf-meta",
+    "dev": "golf-meta-dev"
   }
 }
