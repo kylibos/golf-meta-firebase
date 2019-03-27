@@ -15,7 +15,8 @@ exports.sproutWebHook = functions.https.onRequest((req, res) => {
 	res.set('Access-Control-Allow-Origin', '*');
 
 	db.collection("swings").doc(req.body.title).set({
-	    sproutData: req.body
+	    sproutData: req.body,
+	    state: req.body.state
 	}, { merge: true })
 	.then(function() {
 	    console.log("Document successfully written!");
